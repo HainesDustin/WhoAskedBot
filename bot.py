@@ -20,7 +20,7 @@ class RudeResponder(discord.Client):
 
     async def on_message(self, message):
         name = message.author.display_name
-        logging.info('Message received from ' + name + ' in ' + message.channel)
+        logging.info('Message received from ' + name + ' in ' + message.channel.name)
         # Don't do anything if we sent the message
         if message.author == self.user:
             logging.info('Message was sent by the bot, discarding')
